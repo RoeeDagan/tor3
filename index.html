@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>ניהול קוראים</title>
+    <!-- Meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the responsive stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <label for="parasha_name">שם הפרשה:</label>
+        <input type="text" id="parasha_name" placeholder="הזן פרשה">
+
+        <div class="aliyot-container">
+            <div class="aliyah">
+                <label for="aliyah-1">ראשון</label>
+                <select id="aliyah-1"></select>
+            </div>
+            <div class="aliyah">
+                <label for="aliyah-2">שני</label>
+                <select id="aliyah-2"></select>
+            </div>
+            <div class="aliyah">
+                <label for="aliyah-3">שלישי</label>
+                <select id="aliyah-3"></select>
+            </div>
+            <div class="aliyah">
+                <label for="aliyah-4">רביעי</label>
+                <select id="aliyah-4"></select>
+            </div>
+            <div class="aliyah">
+                <label for="aliyah-5">חמישי</label>
+                <select id="aliyah-5"></select>
+            </div>
+            <div class="aliyah">
+                <label for="aliyah-6">שישי</label>
+                <select id="aliyah-6"></select>
+            </div>
+            <div class="aliyah">
+                <label for="aliyah-7">שביעי</label>
+                <select id="aliyah-7"></select>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="readers-list-btn">לרשימת הקוראים</button>
+            <button id="history-btn">הסטוריית קריאות</button>
+            <button id="bar-mitzvah-btn">פרשות בר מצווה</button>
+            <button id="archive-btn">שמור בארכיון</button>
+            <button id="clear-btn">נקה שדות</button>
+            <button id="save-btn">שמור</button>
+            <input type="file" id="file-input" style="display: none;">
+            <button id="load-btn">טען</button>
+        </div>
+    </div>
+
+    <!-- Readers List Modal -->
+    <div id="readers-list-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('readers-list-modal')">&times;</span>
+            <h2>רשימת קוראים</h2>
+            <div id="readers-list-container"></div>
+            <button id="add-reader-btn">הוסף קורא...</button>
+        </div>
+    </div>
+
+    <!-- Bar Mitzvah Modal -->
+    <div id="bar-mitzvah-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bar-mitzvah-modal')">&times;</span>
+            <h2>רשימת פרשות בר מצווה</h2>
+            <div id="parasha-list-container"></div>
+            <button id="add-parasha-btn">הוסף פרשה...</button>
+        </div>
+    </div>
+
+    <!-- History Modal -->
+    <div id="lastreaders-list-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('lastreaders-list-modal')">&times;</span>
+            <h2>הסטוריית קוראים</h2>
+            <div id="lastreaders-list-container"></div>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
