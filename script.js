@@ -772,6 +772,16 @@ function updateReadersList() {
 
         readerName.textContent = reader;
 
+       
+
+        // Add red color if this reader is in last_readers (read recently)
+
+        if (last_readers.includes(reader)) {
+
+            readerName.classList.add("red-text");
+
+        }
+
  
 
         const removeButton = document.createElement("button");
