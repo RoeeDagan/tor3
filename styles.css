@@ -138,7 +138,7 @@ select option.red-text {
 
     font-weight: bold;
 
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
 
 }
 
@@ -293,6 +293,18 @@ select option.red-text {
 .reader-item span, .parasha-item span {
 
     flex: 1;
+
+}
+
+ 
+
+/* Red text for readers who read recently in the readers list modal */
+
+.reader-item span.red-text {
+
+    color: #dc3545 !important;
+
+    font-weight: bold;
 
 }
 
